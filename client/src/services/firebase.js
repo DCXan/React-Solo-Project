@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { GoogleAuthProvider, signInWithPopup, getAuth } from 'firebase/auth';
-import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { getFirestore, collection, addDoc, serverTimestamp, onSnapshot,
+    query, orderBy } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyAk3c1p9zIjqGU2EqYLOFXuplq4NG_rMaQ",
@@ -48,4 +49,20 @@ async function sendMessage(roomId, user, text) {
     }
 }
 
-export { loginWithGoogle, sendMessage };
+function getMessages(roomId, callback) {
+    return onSnapshot(
+        query(
+            collection(db, 'chat-rooms', roomId, 'messages'),
+            orderBy('timestamp', 'asc')
+        ),
+        (querySnapshot) => {
+            const messages = querySnapshot.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data(),
+            }));
+            callback(messages);
+        }
+    );
+}
+
+export { loginWithGoogle, sendMessage, getMessages };

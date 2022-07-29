@@ -1,0 +1,19 @@
+.message-input-container {
+    display: flex;
+    gap: 4px;
+    position: sticky;
+}
+
+.message-input {
+    padding: 10px 8px;
+    flex: 1;
+    background: var(--color-gray);
+    border-radius: var(--border-radius);
+}
+
+.send-message {
+    padding: 10px 14px;
+    background: var(--color-blue);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
