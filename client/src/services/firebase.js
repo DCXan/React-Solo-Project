@@ -4,7 +4,7 @@ import { getFirestore, collection, addDoc, serverTimestamp, onSnapshot,
     query, orderBy } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAk3c1p9zIjqGU2EqYLOFXuplq4NG_rMaQ",
+    apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
     authDomain: "react-chat-app-ec10e.firebaseapp.com",
     projectId: "react-chat-app-ec10e",
     storageBucket: "react-chat-app-ec10e.appspot.com",
