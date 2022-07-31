@@ -8,8 +8,11 @@ function UnauthenticatedApp() {
         <>
             <h2>Log in to join a chat room!</h2>
             <div>
-                <button onClick={login} className="login">
+                {/* <button onClick={login} className="login">
                     Login with Google
+                </button> */}
+                <button onClick={login} type="button" class="login-with-google-btn" >
+                Sign in with Google
                 </button>
             </div>
         </>
