@@ -1,10 +1,12 @@
 import React from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { sendMessage } from '../../services/firebase';
+import { useDispatch, useSelector } from 'react-redux';
 import './styles.css';
 
 function MessageInput({ roomId }) {
-    const { user } = useAuth();
+    // const { user } = useAuth();
+    const user = useSelector((state) => state.authStatus.user)
     const [value, setValue] = React.useState('');
 
     const handleChange = (event) => {

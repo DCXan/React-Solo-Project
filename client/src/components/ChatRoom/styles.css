@@ -9,3 +9,8 @@
     flex-direction: column;
     height: 80vh;
 }
+
+.logout {
+    background: var(--color-blue);
+    padding: 16px;
+}

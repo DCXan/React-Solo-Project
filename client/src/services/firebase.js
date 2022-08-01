@@ -17,11 +17,13 @@ const db = getFirestore(app);
 
 async function loginWithGoogle() {
 
+    // Initialize signing in with Google and Firebase authentication
     try {
         const provider = new GoogleAuthProvider();
         const auth = getAuth();
 
         const { user } = await signInWithPopup(auth, provider);
+        console.log(user)
 
         return { uid: user.uid, displayName: user.displayName };
         

@@ -1,12 +1,15 @@
 import React from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { useMessages } from '../../hooks/useMessages';
+import { useDispatch, useSelector } from 'react-redux';
 import './styles.css';
 
 function MessageList({ roomId }) {
     const containerRef = React.useRef(null);
-    const { user } = useAuth();
+    // const { user } = useAuth();
+    const user = useSelector((state) => state.authStatus.user)
     const messages = useMessages(roomId);
+    
 
     React.useLayoutEffect(() => {
         if (containerRef.current) {
