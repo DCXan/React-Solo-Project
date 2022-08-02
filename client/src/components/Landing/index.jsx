@@ -1,16 +1,10 @@
 import { Link } from 'react-router-dom';
 import { chatRooms } from '../../data/chatRooms';
-import { useDispatch, useSelector } from 'react-redux';
-import { logOut } from '../../store/authentication'
+
 import './styles.css';
 
 function Landing() {
 
-    const dispatch = useDispatch()
-
-    const logout = () => {
-        dispatch(logOut())
-    }
 
     return (
         <>
@@ -21,7 +15,6 @@ function Landing() {
                         <Link to={`/room/${room.id}`}>{room.title}</Link>
                     </li>
                 ))}
-                <button onClick={logout} className="logout">Log Out</button>
             </ul>
         </>
     );

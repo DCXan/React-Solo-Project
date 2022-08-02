@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import './styles.css';
 import { loginWithGoogle } from '../../services/firebase';
 import { logIn } from '../../store/authentication'

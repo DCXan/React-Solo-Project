@@ -1,7 +1,7 @@
 import { AuthenticatedApp } from '../components/AuthenticatedApp';
 import { UnauthenticatedApp } from '../components/UnauthenticatedApp';
-import { useAuth } from '../hooks/useAuth';
-import { useDispatch, useSelector } from 'react-redux';
+// import { useAuth } from '../hooks/useAuth';
+import { useSelector } from 'react-redux';
 import './FirebaseChat.css';
 
 function FirebaseChat() {

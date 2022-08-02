@@ -4,13 +4,9 @@
     flex-grow: 1;
     border: 1px solid var(--color-gray);
     border-radius: var(--border-radius);
-    overflow: hidden;
+    overflow: overlay;
     display: flex;
     flex-direction: column;
     height: 80vh;
-}
-
-.logout {
-    background: var(--color-blue);
-    padding: 16px;
+    scrollbar-color: var(--color-gray) var(--color-gray);
 }

@@ -2,7 +2,6 @@ import './App.css';
 import React from 'react'
 import io from 'socket.io-client'
 import { useEffect, useState } from 'react';
-import FirebaseChat from './components/FirebaseChat';
 
 const socket = io.connect('http://localhost:3001')
 
