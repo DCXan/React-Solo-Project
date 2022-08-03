@@ -15,9 +15,9 @@ function ChatRoom() {
     return (
         <div>
             <h2>{room.title}</h2>
-            <div>
+            {/* <div>
                 <Link to="/">Back to all rooms</Link>
-            </div>
+            </div> */}
             <div className="messages-container">
                 <MessageList roomId={room.id} />
                 <MessageInput roomId={room.id}/>

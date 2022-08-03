@@ -2,3 +2,9 @@
     background: var(--color-blue);
     padding: 5px 10px 5px 10px;
 }
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
