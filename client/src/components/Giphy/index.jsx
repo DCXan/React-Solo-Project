@@ -1,7 +1,7 @@
 
 import { GiphyFetch } from '@giphy/js-fetch-api'
 import { useState } from 'react'
-import TextList from './TextList'
+import GifList from './GifList'
 import Error from './Error'
 import './styles.css'
 
@@ -14,7 +14,7 @@ const giphy = new GiphyFetch('rg0OnlMBteTeIrU3h05TvsCipADw1hhE')
 // Render the React Component and pass it your fetchGifs as a prop
 // ReactDOM.render(<Grid width={800} columns={3} fetchGifs={fetchGifs} />, target)
 
-function Giphy() {
+function Giphy(roomId) {
 
     const [text, setText] = useState('')
     const [results, setResults] = useState([])
@@ -35,7 +35,7 @@ function Giphy() {
     }
 
     const getGifs = async () => {
-        const result = await giphy.search(text, { sort: 'relevant', lang: 'en', limit: 15, type: 'gifs' })
+        const result = await giphy.animate(text, {limit: 15})
         console.log(result);
         setResults(result.data)
     }
@@ -51,12 +51,13 @@ function Giphy() {
 
     return (
         <div className="App">
-            <h1>Animated Text Generator</h1>
-            <h3>Type text into the form and hit submit</h3>
-            <input className='input-field' value={text} onChange={handleInput} />
-            <button className='submit-btn' onClick={handleSubmit}>giph Me!</button>
+            <div className='input-area'>
+                <input className='input-field' value={text} onChange={handleInput} placeholder="Text to GIPH-ify"/>
+                <button className='submit-btn' onClick={handleSubmit}>Generate GIFs</button>
+                <button className='clear-btn' >Clear</button>
+            </div>
             <Error isError={error} text='Search field cannot be empty.'/>
-            {<TextList gifs={results}  />}
+            {<GifList gifs={results} roomId={roomId}  />}
       </div>
       );
 

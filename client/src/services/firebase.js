@@ -49,6 +49,19 @@ async function sendMessage(roomId, user, text) {
     }
 }
 
+async function sendGif(roomId, user, text) {
+    try {
+        await addDoc(collection(db, 'chat-rooms', roomId, 'messages'), {
+            uid: user.uid,
+            displayName: user.displayName,
+            text: text,
+            timestamp: serverTimestamp(),
+        });
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 function getMessages(roomId, callback) {
     return onSnapshot(
         query(
@@ -65,4 +78,4 @@ function getMessages(roomId, callback) {
     );
 }
 
-export { loginWithGoogle, sendMessage, getMessages };
+export { loginWithGoogle, sendMessage, getMessages, sendGif };

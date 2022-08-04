@@ -34,12 +34,24 @@ function MessageList({ roomId }) {
 
 function Message({ message, isOwnMessage }) {
     const { displayName, text } = message;
-    return (
-        <li className={['message', isOwnMessage && 'own-message'].join(' ')}>
-            <h4 className="sender">{isOwnMessage ? 'You' : displayName}</h4>
-            <div>{text}</div>
-        </li>
-    );
+    if (text.startsWith('https')) {
+        return (
+            <li className={['message', isOwnMessage && 'own-message'].join(' ')}>
+                <h4 className="sender">{isOwnMessage ? 'You' : displayName}</h4>
+                <div><img src={text} className="gif"/></div>
+            </li>
+
+        )
+
+    } else {
+        
+        return (
+            <li className={['message', isOwnMessage && 'own-message'].join(' ')}>
+                <h4 className="sender">{isOwnMessage ? 'You' : displayName}</h4>
+                <div>{text}</div>
+            </li>
+        );
+    }
 }
 
 export { MessageList };

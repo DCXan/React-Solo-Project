@@ -1,5 +1,5 @@
 .messages-container {
-    width: 100%;
+    width: 600px;
     padding: 16px;
     flex-grow: 1;
     border: 1px solid var(--color-gray);
@@ -9,4 +9,5 @@
     flex-direction: column;
     height: 80vh;
     scrollbar-color: var(--color-gray) var(--color-gray);
+    overflow-x: hidden;
 }

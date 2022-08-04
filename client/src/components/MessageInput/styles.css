@@ -14,7 +14,7 @@
 
 .send-message {
     padding: 12px 14px;
-    background: var(--color-blue);
+    background: rgb(32, 201, 88);
     border-radius: var(--border-radius);
     cursor: pointer;
 }

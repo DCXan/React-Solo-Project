@@ -1,8 +1,9 @@
 .message-list-container {
     margin-bottom: 16px;
     flex: 1;
-    overflow: overlay;
+    overflow: auto;
     width: 50vw;
+    min-width: -webkit-fill-available;
 }
 
 .message-list {
@@ -10,6 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    max-width: 580px;
 }
 
 .message {
@@ -28,4 +30,8 @@
 
 .sender {
     margin-bottom: 8px;
+}
+
+.gif {
+    max-width: 150px;
 }
