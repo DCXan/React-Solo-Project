@@ -1,12 +1,12 @@
 const chatRooms = [
-    { id: 'dogs', title: 'Cats' },
-    { id: 'food', title: 'Dogs' },
+    { id: 'digitalcrafts', title: 'DigitalCrafts' },
     { id: 'general', title: 'General' },
-    { id: 'news', title: 'News' },
-    { id: 'music', title: 'Music' },
-    { id: 'sports', title: 'Sports' },
-    { id: 'javascript', title: 'JavaScript' },
     { id: 'python', title: 'Python' },
+    { id: 'js', title: 'JavaScript' },
+    { id: 'node.js', title: 'Node.js' },
+    { id: 'databases', title: 'Databases' },
+    { id: 'interview', title: 'Interview Prep' },
+    { id: 'codechallenges', title: 'Code Challenges' },
 ];
 
 export { chatRooms };

@@ -5,7 +5,7 @@ import {  useSelector } from 'react-redux';
 const GifList = (props) => {
 
   const user = useSelector((state) => state.authStatus.user)
-    console.log(user)
+    // console.log(user)
 
     const items = props.gifs.map((results, index) => {
 

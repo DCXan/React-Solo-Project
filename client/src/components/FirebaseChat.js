@@ -7,7 +7,7 @@ import './FirebaseChat.css';
 function FirebaseChat() {
     // const { user } = useAuth();
     const isAuth = useSelector((state) => state.authStatus.isAuth)
-    console.log(isAuth)
+    // console.log(isAuth)
     return (
         <div className="container">
             <h1>React Chat App</h1>
