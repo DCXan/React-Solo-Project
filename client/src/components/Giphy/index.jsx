@@ -40,6 +40,10 @@ function Giphy(roomId) {
         setResults(result.data)
     }
 
+    const clearGifs = () => {
+        setResults([])
+    }
+
     // useEffect(() => {
 
     //     getGifs()
@@ -54,7 +58,7 @@ function Giphy(roomId) {
             <div className='input-area'>
                 <input className='input-field' value={text} onChange={handleInput} placeholder="Text to GIPH-ify"/>
                 <button className='submit-btn' onClick={handleSubmit}>Generate GIFs</button>
-                <button className='clear-btn' >Clear</button>
+                <button className='clear-btn' onClick={clearGifs}>Clear</button>
             </div>
             <Error isError={error} text='Search field cannot be empty.'/>
             {<GifList gifs={results} roomId={roomId}  />}

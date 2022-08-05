@@ -4,6 +4,7 @@
     overflow: auto;
     width: 50vw;
     min-width: -webkit-fill-available;
+    justify-self: center;
 }
 
 .message-list {

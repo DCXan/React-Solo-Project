@@ -1,7 +1,7 @@
-.App {
+/* .App {
     text-align: center;
     max-height: 25vh;
-  }
+  } */
   
   .error {
     color: #b50000;
@@ -11,18 +11,24 @@
   
   .input-area {
     display: flex;
-    flex-direction: row;
-    margin: 5px;
-    align-content: center;
+    /* flex-direction: row; */
+    margin: 5px 0px;
+    /* align-content: center; */
+    gap: 4px;
+    max-width: 100vw;
   }
   
   .input-field {
-    font-size: 20px;
+    font-size: 14px;
     vertical-align: middle;
     transition: .5s;
-    border-width: 2px;
-    margin: 5px;
+    /* border-width: 2px; */
+    
     color: black;
+    /* padding: 12px 8px; */
+    flex: 1;
+    border-radius: var(--border-radius);
+    padding: 10px 8px;
   }
   
   .input-field:focus {
@@ -38,17 +44,23 @@
   .submit-btn {
     background-color: rgb(235, 19, 95);
     color: #fff;
-    padding: 6px 30px;
+    /* padding: 12px 14px;
     vertical-align: middle;
     outline: none;
     border: none;
     font-size: 16px;
-    transition: .3s;
-    cursor: pointer;
+    transition: .5s;
+    cursor: pointer; */
+    
+  }
+
+  .clear-btn {
+    background-color: rgb(111, 56, 222);
+    
   }
   
   .submit-btn:hover {
-    background-color: rgb(10, 130, 146);
+    background-image: linear-gradient(#a463d9, #24deaa);
   }
   
   .text-container {

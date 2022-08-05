@@ -3,17 +3,18 @@
     gap: 4px;
     /* position: fixed;
     bottom: 0; */
+
 }
 
 .message-input {
-    padding: 12px 8px;
+    padding: 10px 8px;
     flex: 1;
     background: var(--color-gray);
     border-radius: var(--border-radius);
 }
 
 .send-message {
-    padding: 12px 14px;
+    padding: 10px 14px;
     background: rgb(32, 201, 88);
     border-radius: var(--border-radius);
     cursor: pointer;

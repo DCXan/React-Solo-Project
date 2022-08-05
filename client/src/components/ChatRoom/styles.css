@@ -11,3 +11,9 @@
     scrollbar-color: var(--color-gray) var(--color-gray);
     overflow-x: hidden;
 }
+
+@media screen and (max-width: 600px) {
+    .messages-container {
+        width: 80vw;
+    }
+}
